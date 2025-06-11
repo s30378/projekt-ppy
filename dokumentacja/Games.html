@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Games module &#8212; PuffyPals 0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=8dde47fa"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Main module" href="Main.html" />
+    <link rel="prev" title="Projekt_final" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-Games">
+<span id="games-module"></span><h1>Games module<a class="headerlink" href="#module-Games" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="Games.FeedGame">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Games.</span></span><span class="sig-name descname"><span class="pre">FeedGame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zwierzak</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onfinish</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontStyle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Games.FeedGame" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Games.FeedGame.end_game">
+<span class="sig-name descname"><span class="pre">end_game</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Games.FeedGame.end_game" title="Link to this definition">¶</a></dt>
+<dd><p>Kończy grę, podsumowuje wynik i aktualizuje statystyki zwierzaka.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Games.FeedGame.hit">
+<span class="sig-name descname"><span class="pre">hit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Games.FeedGame.hit" title="Link to this definition">¶</a></dt>
+<dd><p>Obsługuje kliknięcia gracza. Jeśli kliknięto w jedzenie – zalicza punkt.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> – Obiekt zdarzenia kliknięcia myszy.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Games.FeedGame.spawn_food">
+<span class="sig-name descname"><span class="pre">spawn_food</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Games.FeedGame.spawn_food" title="Link to this definition">¶</a></dt>
+<dd><p>Losowo umieszcza jedzenie na planszy w jednej z 9 pól.
+Odświeżane co 800 ms.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Games.PlayGame">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Games.</span></span><span class="sig-name descname"><span class="pre">PlayGame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zwierzak</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">onfinish</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontStyle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Games.PlayGame" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Games.PlayGame.ai_move">
+<span class="sig-name descname"><span class="pre">ai_move</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Games.PlayGame.ai_move" title="Link to this definition">¶</a></dt>
+<dd><p>Wykonuje ruch komputera w losowe dostępne pole.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Games.PlayGame.check_draw">
+<span class="sig-name descname"><span class="pre">check_draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Games.PlayGame.check_draw" title="Link to this definition">¶</a></dt>
+<dd><p>Sprawdza, czy gra kończy się remisem.,</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True gdy koniec przez remis, False gdy nie.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Games.PlayGame.check_win">
+<span class="sig-name descname"><span class="pre">check_win</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbol</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Games.PlayGame.check_win" title="Link to this definition">¶</a></dt>
+<dd><p>Sprawdza, czy podany gracz wygrał grę.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>symbol</strong> – Symbol gracza</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Zwraca True gdy ktoś wygrał, False gdy gra toczy się dalej.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Games.PlayGame.click">
+<span class="sig-name descname"><span class="pre">click</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Games.PlayGame.click" title="Link to this definition">¶</a></dt>
+<dd><p>Obsługuje kliknięcie gracza w wybrane pole.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Wiersz przycisku.</p></li>
+<li><p><strong>y</strong> – Kolumna przycisku.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Games.PlayGame.create_board">
+<span class="sig-name descname"><span class="pre">create_board</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Games.PlayGame.create_board" title="Link to this definition">¶</a></dt>
+<dd><p>Tworzy siatkę 3x3 przycisków do gry w kółko i krzyżyk.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Games.PlayGame.end_game">
+<span class="sig-name descname"><span class="pre">end_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Games.PlayGame.end_game" title="Link to this definition">¶</a></dt>
+<dd><p>Kończy grę i wyświetla odpowiedni komunikat, modyfikuje statystyki zwierzaka.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>result</strong> – Symbol wygranego gracza lub “draw”</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">PuffyPals</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Projekt_final</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Games module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Main.html">Main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MyGui.html">MyGui module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SaveManager.html">SaveManager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Zwierzak.html">Zwierzak module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ZwierzakiPodKlasy.html">ZwierzakiPodKlasy module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Projekt_final</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">Projekt_final</a></li>
+      <li>Next: <a href="Main.html" title="next chapter">Main module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Piotr Łaba, Mariusz Szymański.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/Games.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
